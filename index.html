@@ -1,343 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bhumika Jewellers | Premium Jewellery</title>
+<title>Bhumika Jewellers | Premium Jewellery</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffdf9;
-      color: #222;
-    }
+body{
+  font-family:Arial, sans-serif;
+  background:#fffdf9;
+  color:#222;
+}
 
-    header {
-      background: #ffffff;
-      padding: 18px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+header{
+  height:70px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #b58b2a;
-      letter-spacing: 1px;
-    }
+.logo{
+  color:#b58b2a;
+  font-size:20px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin-left: 18px;
-      font-size: 14px;
-    }
+nav{
+  display:flex;
+  gap:25px;
+}
 
-    .hero {
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #fffdf8, #f8f0df);
-    }
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
 
-    .hero h1 {
-      font-size: 45px;
-      color: #222;
-      margin-bottom: 15px;
-    }
+.icons{
+  display:flex;
+  gap:15px;
+  font-size:20px;
+}
 
-    .hero p {
-      font-size: 17px;
-      color: #666;
-      margin-bottom: 30px;
-    }
+.hero{
+  min-height:580px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:50px 20px;
+  background:
+  linear-gradient(rgba(255,255,255,.82),rgba(255,248,232,.88)),
+  radial-gradient(circle at center,#ead49b,#fffdf9 65%);
+}
 
-    .btn {
-      display: inline-block;
-      background: #b58b2a;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 3px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.hero-content{
+  max-width:700px;
+}
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.small-title{
+  color:#b58b2a;
+  letter-spacing:4px;
+  font-size:13px;
+  margin-bottom:20px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:55px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
 
-    .section-title h2 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
+.hero p{
+  color:#666;
+  font-size:17px;
+  line-height:1.7;
+  margin-bottom:30px;
+}
 
-    .section-title p {
-      color: #777;
-    }
+.btn{
+  display:inline-block;
+  background:#b58b2a;
+  color:white;
+  padding:15px 30px;
+  text-decoration:none;
+  border-radius:3px;
+  font-weight:bold;
+}
 
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:75px 20px;
+}
 
-    .category {
-      background: white;
-      border: 1px solid #eee;
-      padding: 30px 15px;
-      text-align: center;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+.heading{
+  text-align:center;
+  margin-bottom:45px;
+}
 
-    .category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
+.heading span{
+  color:#b58b2a;
+  font-size:12px;
+  letter-spacing:3px;
+}
 
-    .category .icon {
-      font-size: 35px;
-      margin-bottom: 12px;
-    }
+.heading h2{
+  font-family:Georgia,serif;
+  font-size:35px;
+  margin-top:10px;
+}
 
-    .category h3 {
-      color: #333;
-    }
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+.category{
+  background:white;
+  border:1px solid #eee;
+  padding:35px 15px;
+  text-align:center;
+  border-radius:6px;
+}
 
-    .product {
-      background: white;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
+.category-icon{
+  font-size:42px;
+  margin-bottom:15px;
+}
 
-    .product-image {
-      height: 250px;
-      background: #f3ead8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-    }
+.category h3{
+  font-family:Georgia,serif;
+  font-size:20px;
+}
 
-    .product-info {
-      padding: 18px;
-    }
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
 
-    .product-info h3 {
-      margin-bottom: 8px;
-    }
+.product{
+  background:white;
+  border:1px solid #eee;
+  border-radius:8px;
+  overflow:hidden;
+  transition:.3s;
+}
 
-    .price {
-      color: #b58b2a;
-      font-weight: bold;
-      font-size: 18px;
-    }
+.product:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
 
-    .why {
-      background: #fff;
-    }
+.product-image{
+  height:300px;
+  background:linear-gradient(135deg,#f7edda,#fff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:80px;
+}
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      text-align: center;
-    }
+.product-info{
+  padding:22px;
+}
 
-    .feature {
-      padding: 25px;
-    }
+.product-info h3{
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin-bottom:8px;
+}
 
-    .feature-icon {
-      font-size: 35px;
-      margin-bottom: 12px;
-    }
+.weight{
+  color:#777;
+  font-size:13px;
+  margin-bottom:12px;
+}
 
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
+.price{
+  color:#b58b2a;
+  font-size:20px;
+  font-weight:bold;
+}
 
-    footer p {
-      color: #ccc;
-      margin-top: 8px;
-    }
+.features-section{
+  background:#faf5e9;
+}
 
-    @media (max-width: 700px) {
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
 
-      header {
-        padding: 15px;
-      }
+.feature{
+  text-align:center;
+  padding:30px 20px;
+}
 
-      nav a {
-        margin-left: 8px;
-        font-size: 12px;
-      }
+.feature-icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
 
-      .hero h1 {
-        font-size: 34px;
-      }
+.feature h3{
+  font-family:Georgia,serif;
+  margin-bottom:10px;
+}
 
-      .categories {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.feature p{
+  color:#666;
+  line-height:1.6;
+  font-size:14px;
+}
 
-      .products {
-        grid-template-columns: 1fr;
-      }
+.contact{
+  text-align:center;
+}
 
-      .features {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.contact p{
+  color:#666;
+  margin:10px 0 25px;
+}
+
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:45px 20px;
+}
+
+footer h2{
+  color:#d2aa55;
+  font-family:Georgia,serif;
+}
+
+footer p{
+  color:#bbb;
+  margin-top:10px;
+  font-size:13px;
+}
+
+@media(max-width:700px){
+
+  header{
+    padding:0 15px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    min-height:500px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:55px 15px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">BHUMIKA JEWELLERS</div>
+<header>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#collections">Collections</a>
-      <a href="#products">Jewellery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="logo">
+    BHUMIKA JEWELLERS
+  </div>
 
-  <section class="hero">
-    <div>
-      <h1>Timeless Jewellery</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#categories">Collections</a>
+    <a href="#products">Jewellery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-      <p>
-        Discover elegant jewellery crafted for your special moments.
-      </p>
+  <div class="icons">
+    <span>⌕</span>
+    <span>♡</span>
+    <span>🛒</span>
+  </div>
 
-      <a href="#products" class="btn">
-        Explore Collection
-      </a>
-    </div>
-  </section>
+</header>
 
-  <section class="section" id="collections">
 
-    <div class="section-title">
-      <h2>Shop By Category</h2>
-      <p>Find jewellery that matches your style</p>
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="small-title">
+      BHUMIKA JEWELLERS
     </div>
 
-    <div class="categories">
+    <h1>
+      Timeless Elegance,
+      Beautifully Crafted
+    </h1>
 
-      <div class="category">
-        <div class="icon">💍</div>
-        <h3>Rings</h3>
+    <p>
+      Discover exquisite jewellery designed to make
+      every special moment unforgettable.
+    </p>
+
+    <a href="#products" class="btn">
+      Explore Collection
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="categories">
+
+  <div class="heading">
+    <span>OUR COLLECTION</span>
+    <h2>Shop By Category</h2>
+  </div>
+
+  <div class="categories">
+
+    <div class="category">
+      <div class="category-icon">💍</div>
+      <h3>Rings</h3>
+    </div>
+
+    <div class="category">
+      <div class="category-icon">📿</div>
+      <h3>Necklaces</h3>
+    </div>
+
+    <div class="category">
+      <div class="category-icon">✨</div>
+      <h3>Earrings</h3>
+    </div>
+
+    <div class="category">
+      <div class="category-icon">💫</div>
+      <h3>Bracelets</h3>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="products">
+
+  <div class="heading">
+    <span>FEATURED</span>
+    <h2>Our Jewellery</h2>
+  </div>
+
+  <div class="products">
+
+    <div class="product">
+
+      <div class="product-image">
+        💍
       </div>
 
-      <div class="category">
-        <div class="icon">📿</div>
-        <h3>Necklaces</h3>
-      </div>
-
-      <div class="category">
-        <div class="icon">👂</div>
-        <h3>Earrings</h3>
-      </div>
-
-      <div class="category">
-        <div class="icon">✨</div>
-        <h3>Bracelets</h3>
+      <div class="product-info">
+        <h3>Classic Gold Ring</h3>
+        <div class="weight">22K Gold • 4.50g</div>
+        <div class="price">₹25,000</div>
       </div>
 
     </div>
-  </section>
 
-  <section class="section" id="products">
 
-    <div class="section-title">
-      <h2>Featured Jewellery</h2>
-      <p>Our beautiful collection</p>
-    </div>
+    <div class="product">
 
-    <div class="products">
-
-      <div class="product">
-
-        <div class="product-image">
-          💍
-        </div>
-
-        <div class="product-info">
-          <h3>Classic Gold Ring</h3>
-          <p class="price">₹25,000</p>
-        </div>
-
+      <div class="product-image">
+        📿
       </div>
 
-      <div class="product">
-
-        <div class="product-image">
-          📿
-        </div>
-
-        <div class="product-info">
-          <h3>Elegant Gold Necklace</h3>
-          <p class="price">₹75,000</p>
-        </div>
-
-      </div>
-
-      <div class="product">
-
-        <div class="product-image">
-          ✨
-        </div>
-
-        <div class="product-info">
-          <h3>Diamond Earrings</h3>
-          <p class="price">₹45,000</p>
-        </div>
-
+      <div class="product-info">
+        <h3>Elegant Gold Necklace</h3>
+        <div class="weight">22K Gold • 18.20g</div>
+        <div class="price">₹75,000</div>
       </div>
 
     </div>
-  </section>
 
-  <section class="section why">
 
-    <div class="section-title">
-      <h2>Why Choose Us</h2>
+    <div class="product">
+
+      <div class="product-image">
+        ✨
+      </div>
+
+      <div class="product-info">
+        <h3>Diamond Earrings</h3>
+        <div class="weight">18K Gold • 3.20g</div>
+        <div class="price">₹45,000</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="features-section">
+
+  <div class="section">
+
+    <div class="heading">
+      <span>WHY BHUMIKA</span>
+      <h2>Made With Trust</h2>
     </div>
 
     <div class="features">
@@ -345,34 +456,69 @@
       <div class="feature">
         <div class="feature-icon">💎</div>
         <h3>Premium Quality</h3>
-        <p>Beautiful jewellery with attention to detail.</p>
+        <p>
+          Beautiful jewellery crafted with attention
+          to every detail.
+        </p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">🔒</div>
         <h3>Secure Shopping</h3>
-        <p>Your information is handled securely.</p>
+        <p>
+          Your personal information and orders
+          are handled securely.
+        </p>
       </div>
 
       <div class="feature">
-        <div class="feature-icon">📞</div>
-        <h3>Easy Enquiry</h3>
-        <p>Contact us easily for product enquiries.</p>
+        <div class="feature-icon">🤝</div>
+        <h3>Trusted Service</h3>
+        <p>
+          Get personal assistance for your jewellery
+          selection and enquiries.
+        </p>
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-  <footer id="contact">
+</section>
 
-    <h2>Bhumika Jewellers</h2>
 
-    <p>Premium Jewellery • Trust • Elegance</p>
+<section class="section contact" id="contact">
 
-    <p>© 2026 Bhumika Jewellers. All Rights Reserved.</p>
+  <div class="heading">
+    <span>GET IN TOUCH</span>
+    <h2>Find Your Perfect Jewellery</h2>
+  </div>
 
-  </footer>
+  <p>
+    Have a question about our jewellery?
+    Contact us for product details and enquiries.
+  </p>
+
+  <a href="#" class="btn">
+    WhatsApp Enquiry
+  </a>
+
+</section>
+
+
+<footer>
+
+  <h2>Bhumika Jewellers</h2>
+
+  <p>
+    Premium Jewellery • Trust • Elegance
+  </p>
+
+  <p>
+    © 2026 Bhumika Jewellers. All Rights Reserved.
+  </p>
+
+</footer>
 
 </body>
 </html>
